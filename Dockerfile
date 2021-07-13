@@ -8,6 +8,7 @@ RUN gem install bindex -v '0.8.1' --source 'https://rubygems.org/'
 RUN gem install msgpack -v '1.4.2' --source 'https://rubygems.org/'
 RUN gem install bootsnap -v '1.7.5' --source 'https://rubygems.org/'
 RUN gem install byebug -v '11.1.3' --source 'https://rubygems.org/'
+RUN gem install ffi -v '1.15.3' --source 'https://rubygems.org/'
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
