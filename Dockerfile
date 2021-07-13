@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM ruby:2.5
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
-
+RUN gem install racc -v '1.5.2' --source 'https://rubygems.org/'
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
