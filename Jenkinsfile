@@ -6,7 +6,7 @@ pipeline {
             steps {
 		sh '''
                 echo 'Building..'
-		docker build .
+		docker build -t test1
 		'''
             }
         }
