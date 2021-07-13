@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Build and Deploy') {
             steps {
 		sh '''
                 echo 'Building..'
-		docker build -t test1 .
+        docker-compose up -d
 		'''
             }
         }
@@ -15,12 +15,8 @@ pipeline {
 		sh '''
                 echo 'Testing..'
 		docker images
+        docker ps
 		'''
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
             }
         }
     }
