@@ -10,6 +10,7 @@ RUN gem install bootsnap -v '1.7.5' --source 'https://rubygems.org/'
 RUN gem install byebug -v '11.1.3' --source 'https://rubygems.org/'
 RUN gem install ffi -v '1.15.3' --source 'https://rubygems.org/'
 RUN gem install pg -v '1.2.3' --source 'https://rubygems.org/'
+RUN gem install puma -v '3.12.6' --source 'https://rubygems.org/'
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
