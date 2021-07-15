@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PATH = "$PATH:/var/lib/jenkins/workspace/test@tmp/durable-5481693e/"
+        PATH = "$PATH:/var/lib/jenkins/workspace/test@tmp/durable-33f18b73/script.sh"
     }
 
     stages {
