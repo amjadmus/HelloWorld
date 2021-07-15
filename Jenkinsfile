@@ -5,10 +5,7 @@ pipeline {
         stage('Build and Deploy') {
             steps {
 		sh '''
-                echo 'Building..'
-        docker stop $(docker ps -a -q)    
-        docker rm $(docker ps -a -q)    
-        docker rmi $(docker images -q)        
+                echo 'Building..'       
         docker-compose up -d
 		'''
             }
