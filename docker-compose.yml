@@ -7,7 +7,6 @@ services:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: myapp_development
   web:
     build: .
     restart: always
